@@ -68,7 +68,8 @@ function dingdingbot() {
 
 function main() {
     for ((u = 0; u < ${#all_username_password[*]}; u++)); do 
-        sleep $(shuf -i 1-2 -n1)
+		# 随机延迟任务1-20秒
+        sleep $(shuf -i 1-20 -n1) 
         username=$(echo ${all_username_password[u]} | cut -d@ -f1)
         password=$(echo ${all_username_password[u]} | cut -d@ -f2)
         randomsp=$(echo ${all_username_password[u]} | cut -d@ -f3)
