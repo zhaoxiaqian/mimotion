@@ -2,7 +2,7 @@
 
 #### VPS部署
 ```bash
-wget --no-check-certificate -O mimotion.sh https://raw.githubusercontent.com/mixool/mimotion/main/mimotion.sh
+wget --no-check-certificate -O mimotion.sh https://github.com/mixool/mimotion/raw/main/mimotion.sh
 chmod 755 mimotion.sh
 bash mimotion.sh 18812345678@password@10000-20000
 ```
