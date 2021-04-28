@@ -4,7 +4,7 @@
 ```bash
 wget --no-check-certificate -O mimotion.sh https://github.com/mixool/mimotion/raw/main/mimotion.sh
 chmod 755 mimotion.sh
-bash mimotion.sh 18812345678@password@10000-20000
+bash mimotion.sh 18812345678@password@10000-20000 19912345678@password@2000-3000
 ```
 
 | 参数 | 说明 |
