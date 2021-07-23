@@ -13,7 +13,7 @@ all_username_password=($(echo ${all_parameter[*]} | grep -oE "1[0-9]{10}@[a-zA-Z
 [[ $all_username_password == "" ]] && echo "mimotion参数错误" && exit 1
 
 # deviceId: 随机设备ID,也可使用传入参数 deviceId@*************
-deviceId=$(shuf -i 123456789012345-987654321012345 -n 1)
+deviceId=$(tr -dc '0-9' </dev/urandom | head -c 999999 | grep -oE "[1-9][0-9]+" | head -c 15)
 echo ${all_parameter[*]} | grep -qE "deviceId@[0-9]+" && deviceId=$(echo ${all_parameter[*]} | grep -oE "deviceId@[0-9]+" | cut -f2 -d@)
 
 # app版本和UA
