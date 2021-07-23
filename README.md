@@ -7,6 +7,15 @@ chmod 755 mimotion.sh
 bash mimotion.sh 18812345678@password@10000-20000 19912345678@password@2000-3000
 ```
 
+#### Docker部署
+```bash
+wget --no-check-certificate -O docker-compose.yml https://github.com/mixool/jdmode/blob/main/mimotion.yml
+修改 par_mimotion 参数
+docker-compose up -d
+docker exec -it mimotion /bin/sh
+crontab -l
+```
+
 | 参数 | 说明 |
 | -------- | ----- |
 | `18812345678@password@10000-20000` | 账号@密码@随机步数起止点,可多次传入支持多账号 |
